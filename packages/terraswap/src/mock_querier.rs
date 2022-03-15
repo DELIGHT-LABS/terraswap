@@ -257,9 +257,9 @@ impl WasmMockQuerier {
         self.terraswap_factory_querier = TerraswapFactoryQuerier::new(pairs);
     }
 
-    // pub fn with_balance(&mut self, balances: &[(&HumanAddr, &[Coin])]) {
-    //     for (addr, balance) in balances {
-    //         self.base.update_balance(addr, balance.to_vec());
-    //     }
-    // }
+    pub fn with_balance(&mut self, balances: &[(&String, &[Coin])]) {
+        for (addr, balance) in balances {
+            self.base.update_balance(addr.to_string(), balance.to_vec());
+        }
+    }
 }
