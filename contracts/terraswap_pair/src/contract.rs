@@ -396,7 +396,7 @@ pub fn swap(
         belief_price,
         max_spread,
         offer_amount,
-        return_amount + commission_amount,
+        return_amount,
         spread_amount,
     )?;
 
